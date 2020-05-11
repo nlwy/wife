@@ -1,0 +1,82 @@
+@import '../lib/stylus/_common'
+.content-box
+  width rem(2480)
+  margin auto
+  padding-bottom rem(200)
+  .content-pic
+    display none
+    &.show
+      display block
+  .content-title
+    padding rem(130) 0
+    display none
+    width 50%
+    margin auto
+    text-align center
+    &.about
+      width 100%
+    .about-me
+      display flex
+      min-height rem(700)
+      margin-top rem(-100)
+      p
+        width rem(640)
+        white-space pre-line
+        line-height 1.5
+        font-size rem(24)
+        &:nth-child(1)
+          margin-right rem(50)
+  .header
+    padding rem(130) 0
+    a:hover
+      text-decoration underline
+    h1
+      cursor pointer
+      img
+        width rem(591)
+        height rem(63)
+    hgroup
+      margin-top rem(70)
+      white-space pre-line
+      display flex
+      justify-content space-between
+      line-height 1.5
+      h2
+        font-size rem(24)
+      p
+        font-size rem(24)
+        cursor pointer
+  .content
+    ul
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+      li
+        width rem(590)
+        height rem(590)
+        position relative
+        cursor pointer
+        overflow hidden
+        margin-bottom rem(40)
+        img
+          trans(transform)
+        p
+          font-size rem(20)
+          position absolute
+          text-align left
+          hidden 1
+          width rem(590)
+          height rem(100)
+          background: linear-gradient(to top, rgba(0,0,0,.6) 0%,rgba(125,185,232,0) 100%)
+          bottom 0
+          color #fff
+          padding 0 rem(40)
+          line-height rem(100)
+          box-sizing border-box
+          transform translate3d(0,100%,0)
+          trans(transform)
+        &:hover
+          p
+            transform translate3d(0,0,0)
+          img
+            transform scale(1.05)

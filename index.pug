@@ -1,0 +1,40 @@
+include ./lib/pug/_head
+  article(class="content-box")
+    header(class="header")
+      h1(id="goIndex")
+        img(src="./images/logo.png")
+      hgroup
+        h2 Based in Beijing.  #[br]Visual designer for brand, event, space, illustration, pop-up. #[br] #[br]CONTACT ME: #[a(href="mailto:kangkui66@126.com") kangkui66@126.com ] 
+        p(id="aboutMe") ABOUT ME
+    section(class="content-pic",id="contPic")
+      img(src="", alt="",id="contImg")
+    section(class="content-title",id="congTit")
+    section(class="content")
+      ul(id="contList")
+        -
+          var list = [
+            'SHORT VIDEO FUN LIFE FESTIVAL 2017',
+            'GOLDEN SECOND AWARDS',
+            'OCDC X Elephant Studio',
+            'smart times & smart dealer',
+            'OCDC',
+            'NIKE JUVENILE',
+            'TENCENT VIDEO VIP 2018. SEASON I.',
+            'TOUTIAO CREATION & COMMUNICATION CONFERENCE 2019',
+            'THE ALL-NEW X5 NATIONAL LAUNCH EVENT.',
+            'TMTPOST',
+            'FANTASTIC GARDEN',
+            'TOUTIAO CREATOR CONFERENCES 2017',
+            'COCA COLA  CHINA SYSTEM CONFERENCE',
+            'MINI X PLAN',
+            'Mercedes-benz National Dealer Conference',
+            'caikr.cn',
+            'AUDI URBAN ELECTRONICS',
+            'THE AMAZING TRAVEL',
+            'KOMATSU',
+            'TOUTIAO ENTERTAINMENT GRAND CEREMONY'
+          ]
+        each value,index in list
+          li
+            img(src=`./images/cont-${index + 1}.jpg`, alt="",data-index=index)
+            p= value

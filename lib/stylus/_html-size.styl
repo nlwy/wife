@@ -1,0 +1,7 @@
+fontSize($size = design-size)
+  font-size (floor((($size / (design-size / design-dpi))*1000))/1000 * 100%)
+ 
+for $animal in device-size
+    @media only screen and (min-width: $animal)
+      html
+        fontSize($animal)

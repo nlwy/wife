@@ -1,0 +1,77 @@
+rem($px)
+  if $px == 'auto'
+    return 'auto'
+  else 
+    return (round(($px / (html-size * design-dpi)) * 10000)/10000)rem
+misize($s = 0.7)
+  transform-origin left
+  transform scale($s)
+white-panel($h = 100,$pd = false,$bg = $color-white)
+  height rem($h)
+  background-color $bg
+  if $pd
+    padding 0 rem(40)
+more($hover = false)
+  misize(0.8)
+  display block
+  font-family Arial, Helvetica, sans-serif
+  font-weight bold
+  color $color-orange
+  border 1px solid $color-orange
+  height rem(36)
+  width rem(90)
+  text-align center
+  line-height rem(28)
+  font-size rem(20)
+  border-radius rem(6)
+  transform-origin right
+  if $hover
+    &:hover
+      background $color-orange
+      color $color-white
+panel()
+  position absolute
+  left 0
+  right 0
+  top 0
+  bottom 0
+w($px = 100%)
+  width rem($px)
+h($px = 100%)
+  height rem($px)
+p($p = a)
+  if $p == a
+    position absolute
+  else 
+    position relative
+b($c = $font-color)
+  if $c == w
+    background-color $font-color
+  else 
+    background-color $c
+b-r($px = rem(30))
+  border-radius rem($px)
+f-s($px = rem(30))
+  font-size rem($px)
+dp-c()
+  display flex
+  justify-content center
+  align-items center
+trans($arr = all,$time = 0.2s)
+  transition $arr $time linear
+hidden($n = 1)
+  if $n == 1
+    white-space nowrap
+    text-overflow ellipsis
+    overflow hidden
+  else 
+    overflow hidden
+    display -webkit-box
+    -webkit-line-clamp $n
+    -webkit-box-orient vertical
+bg($icon,$p = center , $c = transparent, $s = 100%)
+  background url($icon) $p no-repeat $c
+  background-size $s
+
+
+
